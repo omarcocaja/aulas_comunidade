@@ -1,0 +1,27 @@
+{
+  "job_name": "live_20260323_orquestracao_demo",
+  "workspace_folder": "/Shared/aulas_ao_vivo/live_20260323",
+  "import_notebooks": true,
+  "overwrite_notebooks": true,
+
+  "src_schema": "aulas_ao_vivo.live_20260309",
+  "tgt_schema": "aulas_ao_vivo.live_20260323",
+  
+  "process_date": "2026-03-01",
+  "n_linhas": "50000000",
+  "seed": "66",
+  "start_ts": "2021-01-01 00:00:00",
+  "taxa_duplicidade": "0.08",
+  "valid_status": "pago",
+  
+  "notebooks": [
+    { "file": "00_init_schema_volume.ipynb", "path": "00_init_schema_volume" },
+    { "file": "10_dim_catalogo_produtos_link.ipynb", "path": "10_dim_catalogo_produtos_link" },
+    { "file": "01_ingest_bronze_pedidos.ipynb", "path": "01_ingest_bronze_pedidos" },
+    { "file": "11_silver_vendas_itens_pedido.ipynb", "path": "11_silver_vendas_itens_pedido" },
+    { "file": "12_silver_vendas_pedidos.ipynb", "path": "12_silver_vendas_pedidos" },
+    { "file": "20_gold_vendas_receita_mensal_produto_uf.ipynb", "path": "20_gold_vendas_receita_mensal_produto_uf" },
+    { "file": "21_gold_vendas_kpis_mensais.ipynb", "path": "21_gold_vendas_kpis_mensais" },
+    { "file": "90_report_smoke.ipynb", "path": "90_report_smoke" }
+  ]
+}
